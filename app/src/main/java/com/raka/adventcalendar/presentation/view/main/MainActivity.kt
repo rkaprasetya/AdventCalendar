@@ -18,9 +18,9 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity(),MainContracts.view {
 
     @Inject
-    lateinit var presenter : MainPresenterImpl
+    private lateinit var presenter : MainPresenterImpl
 
-    lateinit var component : MainActivityComponent
+    private lateinit var component : MainActivityComponent
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

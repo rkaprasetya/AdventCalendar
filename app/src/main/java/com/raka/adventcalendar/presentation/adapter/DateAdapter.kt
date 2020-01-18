@@ -45,10 +45,17 @@ class DateAdapter(
 
     }
 
+    /**
+     * set blur on the image if the image date above the current date
+     */
     private fun setImageBlur(holder: ViewHolder) {
         holder.itemView.iv_date.alpha = 0.2f
     }
 
+    /**
+     * Set flip animation on the image
+     * when the image date is below or equals current date
+     */
     private fun setFlipAnimation(holder: ViewHolder, position: Int) {
         holder.itemView.setOnClickListener {
             holder.itemView.iv_date.animate().rotationY(90f)

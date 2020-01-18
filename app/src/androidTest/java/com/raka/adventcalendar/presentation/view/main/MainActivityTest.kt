@@ -15,6 +15,9 @@ class MainActivityTest{
     @get:Rule
     val activityRule = ActivityTestRule(MainActivity::class.java, false,false)
 
+    /**
+     * Test to check whether the app launches successfully
+     */
     @Test
     fun appLaunchesSuccessfully(){
         ActivityScenario.launch(MainActivity::class.java)
