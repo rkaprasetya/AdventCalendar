@@ -1,4 +1,3 @@
 package com.raka.adventcalendar.model
 
-class DateItem {
-}
+data class DateItem (val imgFront:Int, val imgBack:Int, val dateValue:Int, var isFlipped:Boolean = false)

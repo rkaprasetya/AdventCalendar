@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AdventCalendar</string>
+    <string name="january_23rd_may">January, 23rd May</string>
+    <string name="dateimage">dateImage</string>
 </resources>

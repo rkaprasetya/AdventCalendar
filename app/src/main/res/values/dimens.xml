@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tv_font_size_date">20sp</dimen>
+    <dimen name="tv_appbar_main_margin_start">15dp</dimen>
+    <dimen name="tv_appbar_main_margin_top_bottom">5dp</dimen>
+    <dimen name="tv_date_margin_top_bottom">3dp</dimen>
+    <dimen name="tv_date_margin_start">10dp</dimen>
+
+    <dimen name="cv_margin_start_end">7dp</dimen>
+    <dimen name="cv_elevation">2dp</dimen>
+    <dimen name="cv_corner_radius">5dp</dimen>
+</resources>
