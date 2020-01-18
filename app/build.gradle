@@ -4,13 +4,15 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
-    compileSdkVersion 29
+    compileSdkVersion Versions.androidCompileSdk
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.raka.adventcalendar"
-        minSdkVersion 24
-        targetSdkVersion 29
+        minSdkVersion Versions.androidMinSdk
+        targetSdkVersion Versions.androidTargetSdk
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -26,10 +28,21 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation AppDependencies.appCompat
+    implementation AppDependencies.core
+    implementation AppDependencies.constraintLayout
+
+    //recycler-view
+    implementation AppDependencies.design
+    implementation AppDependencies.recyclerView
+
+    //Dagger 2
+    api AppDependencies.daggerAndroid
+    kapt AppDependencies.daggerCompiler
+    api AppDependencies.daggerAndroidSupport
+    annotationProcessor AppDependencies.daggerProcessor
+
+    testImplementation TestDependencies.jUnit
+    androidTestImplementation TestDependencies.runner
+    androidTestImplementation TestDependencies.espressoCore
 }
