@@ -1,7 +1,8 @@
-package com.raka.adventcalendar
+package com.raka.adventcalendar.presentation.view.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.raka.adventcalendar.R
 
 class MainActivity : AppCompatActivity() {
 
