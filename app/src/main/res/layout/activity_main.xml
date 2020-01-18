@@ -46,7 +46,6 @@
             android:layout_marginStart="@dimen/tv_date_margin_start"
             android:layout_marginTop="@dimen/tv_date_margin_top_bottom"
             android:layout_marginBottom="@dimen/tv_date_margin_top_bottom"
-            android:text="@string/january_23rd_may"
             android:textColor="@android:color/black" />
     </RelativeLayout>
 

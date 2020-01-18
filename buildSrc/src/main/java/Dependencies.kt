@@ -13,6 +13,9 @@ object Versions{
     const val jUnit = "4.12"
     const val runner = "1.2.0"
     const val espresso = "3.2.0"
+    const val mockito = "3.0.0"
+    const val junitExt = "1.1.1"
+
 }
 
 object AppDependencies{
@@ -31,4 +34,8 @@ object TestDependencies{
     const val jUnit = "junit:junit:${Versions.jUnit}"
     const val runner = "androidx.test:runner:${Versions.runner}"
     const val espressoCore= "androidx.test.espresso:espresso-core:${Versions.espresso}"
+    const val mockito = "org.mockito:mockito-core:${Versions.mockito}:"
+    const val rule = "androidx.test:rules:${Versions.runner}"
+    const val truth = "androidx.test.ext:truth:${Versions.runner}"
+    const val junitExt = "androidx.test.ext:junit:${Versions.junitExt}"
 }

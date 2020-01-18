@@ -45,4 +45,9 @@ dependencies {
     testImplementation TestDependencies.jUnit
     androidTestImplementation TestDependencies.runner
     androidTestImplementation TestDependencies.espressoCore
+    testImplementation TestDependencies.mockito
+    androidTestImplementation TestDependencies.rule
+    androidTestImplementation TestDependencies.truth
+    androidTestImplementation TestDependencies.junitExt
+
 }
