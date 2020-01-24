@@ -42,7 +42,6 @@ class DateAdapter(
         } else {
             setImageBlur(holder)
         }
-
     }
 
     /**
@@ -67,7 +66,6 @@ class DateAdapter(
         position: Int,
         holder: ViewHolder
     ): AnimatorListenerAdapter = object : AnimatorListenerAdapter() {
-
         override fun onAnimationEnd(animation: Animator?) {
             super.onAnimationEnd(animation)
             if (dateList[position].isFlipped) {
@@ -79,15 +77,12 @@ class DateAdapter(
             }
             holder.itemView.iv_date.rotationY = 270f
             holder.itemView.iv_date.animate().rotationY(360f).setListener(null)
-
         }
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
         fun bind(item: DateItem) {
             itemView.iv_date.setImageResource(item.imgFront)
-
         }
     }
 }

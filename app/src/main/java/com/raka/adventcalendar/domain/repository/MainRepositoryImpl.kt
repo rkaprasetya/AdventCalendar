@@ -4,7 +4,7 @@ import com.raka.adventcalendar.R
 import com.raka.adventcalendar.model.DateItem
 import com.raka.adventcalendar.presentation.view.main.MainContracts
 
-class MainRepositoryImpl:MainContracts.repository {
+class MainRepositoryImpl : MainContracts.repository {
     override fun getDateList(): List<DateItem> = mutableListOf(
         DateItem(
             R.drawable.ic_date_1_front,

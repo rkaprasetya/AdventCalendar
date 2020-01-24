@@ -17,6 +17,6 @@ class MainPresenterImplTest{
         val view = mock(MainContracts.view::class.java)
         val presenter = MainPresenterImpl(view,repository)
         val result = presenter.getCurrentDate()
-        assertEquals("18 January 2020", result)
+        assertEquals("24 January 2020", result)
     }
 }

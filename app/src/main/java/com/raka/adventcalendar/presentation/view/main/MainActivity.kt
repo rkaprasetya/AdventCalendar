@@ -15,22 +15,21 @@ import com.raka.adventcalendar.presentation.presenter.MainPresenterImpl
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity(),MainContracts.view {
+class MainActivity : AppCompatActivity(), MainContracts.view {
 
     @Inject
-    private lateinit var presenter : MainPresenterImpl
+    lateinit var presenter: MainPresenterImpl
+    lateinit var component: MainActivityComponent
 
-    private lateinit var component : MainActivityComponent
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupDagger()
         initWidget()
         presenter.loadData()
-
     }
 
-    private fun setupDagger(){
+    private fun setupDagger() {
         component = DaggerMainActivityComponent.builder().activityModule(ActivityModule(this))
             .applicationComponent((application as AdventCalendarApplication).getApplicationComponent())
             .build()
@@ -43,14 +42,11 @@ class MainActivity : AppCompatActivity(),MainContracts.view {
         rv_bottom.layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
     }
 
-
-
-
     private fun setFullDate(fullDate: String) {
         tv_date.text = fullDate
     }
 
-    override fun setAdapter(shuffledList:List<DateItem>,currentDate:Int) {
+    override fun setAdapter(shuffledList: List<DateItem>, currentDate: Int) {
         DateAdapter(
             shuffledList.subList(0, 11),
             this,
@@ -67,7 +63,6 @@ class MainActivity : AppCompatActivity(),MainContracts.view {
             rv_bottom.adapter = adapterBottom
             adapterBottom.notifyDataSetChanged()
         }
-
     }
 
 }
