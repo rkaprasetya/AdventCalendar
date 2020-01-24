@@ -9,3 +9,4 @@ This app is built using :
 5. Min SDK 24
 6. Compiler SDK 29
 7. Target SDK 29
+8. All images were created using Figma
